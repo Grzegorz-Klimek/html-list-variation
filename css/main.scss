@@ -13,7 +13,7 @@ $fontBasic: #ccc;
 //*************  MIXINS **************
 
 @mixin shadow-content() {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
 }
 
 @mixin custom-gradient($color) {
@@ -67,7 +67,7 @@ body {
   @include stretcher();
   background: #000;
   position: absolute;
-  opacity: 0.8;
+  opacity: .75;
 }
 
 //***********  LIST STYLES ***********
@@ -100,7 +100,7 @@ ul {
     text-align: center;
     display: inline-block;
     margin-right: -3px;
-    padding: 0.4em 0;
+    padding: .4em 0;
   }
 
   //**********  HEADER LIs STYLES  **********
@@ -179,6 +179,7 @@ ul {
 
   .content {
     @include custom-gradient($darkColor);
+    position: relative;
     border: .5px solid rgba(150, 150, 150, .1);
     border-top-color: transparent;
     margin: .25%;
@@ -192,8 +193,15 @@ ul {
   .content-narrow {
     width: 9%;
   }
-  .content-one, .content-three, .content-four {
-    color: darken($fontBasic, 30%)
+  .content-three, .content-four {
+    color: darken($fontBasic, 30%);
+    border-color: transparent;
+    background: #010101;
+  }
+  .content-one {
+    @include custom-gradient(darken($accentColor, 20%));
+    border-color: transparent;
+    font-weight: 800;
   }
 
 }
