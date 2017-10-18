@@ -138,13 +138,13 @@ ul {
       @include border-effect-dimension($accentColor);
     }
   }
-  .header-wide {
+  .header_wide {
     width: 50px;
     @media #{$small} {
       width: 170px;
     }
   }
-  .header-narrow {
+  .header_narrow {
     width: 50px;
     @media #{$small} {
       width: 75px;
@@ -187,10 +187,10 @@ ul {
     border-radius: 8px;
     padding: .7em 0;
   }
-  .content-wide {
+  .content_wide {
     width: 38%;
   }
-  .content-narrow {
+  .content_narrow {
     width: 9%;
   }
   .content-three, .content-four {

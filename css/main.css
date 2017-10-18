@@ -91,15 +91,15 @@ ul {
       border-top-color: transparent;
       border-radius: 7px;
       border-bottom-right-radius: 10px; }
-  ul .header-wide {
+  ul .header_wide {
     width: 50px; }
     @media only screen and (min-width: 768px) {
-      ul .header-wide {
+      ul .header_wide {
         width: 170px; } }
-  ul .header-narrow {
+  ul .header_narrow {
     width: 50px; }
     @media only screen and (min-width: 768px) {
-      ul .header-narrow {
+      ul .header_narrow {
         width: 75px; } }
   ul .header-one {
     left: 0; }
@@ -130,9 +130,9 @@ ul {
     margin-bottom: .5%;
     border-radius: 8px;
     padding: .7em 0; }
-  ul .content-wide {
+  ul .content_wide {
     width: 38%; }
-  ul .content-narrow {
+  ul .content_narrow {
     width: 9%; }
   ul .content-three, ul .content-four {
     color: gray;
