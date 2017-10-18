@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background: url("main-background.jpg");
+  background: url("../media/main-background.jpg");
   background-size: cover;
   color: #ccc;
   letter-spacing: .5px; }
