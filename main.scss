@@ -1,0 +1,196 @@
+//***********  MEDIA QUERIES ***********
+
+$small: 'only screen and (min-width: 768px)';
+$medium: 'only screen and (min-width: 992px)';
+$large: 'only screen and (min-width: 1200px)';
+
+//************  VARIABLES *************
+
+$accentColor: #c61800;
+$darkColor: #0a0a0a;
+$fontBasic: #ccc;
+
+//*************  MIXINS **************
+
+@mixin shadow-content() {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@mixin custom-gradient($color) {
+  background: linear-gradient(to right top, $color, darken($color, 10%), $color);
+}
+
+@mixin stretcher() {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@mixin border-effect-dimension($color) {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 2.5px solid darken($color, 13%);
+  border-top-color: transparent;
+  border-radius: 7px;
+  border-bottom-right-radius: 10px;
+}
+
+//************  GLOBALS ************
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: url("main-background.jpg");
+  background-size: cover;
+  color: $fontBasic;
+  letter-spacing: .5px;
+}
+
+.divider {
+  height: 100px;
+  @media #{$small} {
+    height: 50px;
+  }
+}
+
+.darkoverlay {
+  @include stretcher();
+  background: #000;
+  position: absolute;
+  opacity: 0.4;
+}
+
+//***********  LIST STYLES ***********
+
+main {
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid transparent;
+  width: 90%;
+  @media #{$small} {
+    @include shadow-content();
+    margin: 100px auto;
+    width: 70%;
+    padding: 25px 25px 25px 40px;
+    border-color: rgba(255, 255, 255, .1);
+    background-color: rgba(0, 0, 0, .4);
+  }
+  @media #{$medium} {
+    width: 60%;
+  }
+}
+
+ul {
+  position: relative;
+  list-style-type: none;
+  li {
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    margin-right: -3px;
+    padding: 0.4em 0;
+  }
+
+  //**********  HEADER LIs STYLES  **********
+
+  .header {
+    @include shadow-content();
+    @include custom-gradient($accentColor);
+    position: absolute;
+    top: 15px;
+    @media #{$small} {
+      top: -45px;
+    }
+    color: lighten($fontBasic, 15%);
+    margin: .1%;
+    margin-bottom: 3em;
+    padding: 1.2em 0;
+    font-size: .7em;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    span {
+      display: none;
+      @media #{$small} {
+        display: inline;
+      }
+    }
+    i {
+      margin-right: 0;
+      @media #{$small} {
+        margin-right: 1em;
+      }
+    }
+    &:after {
+      @include border-effect-dimension($accentColor);
+    }
+  }
+  .header-wide {
+    width: 50px;
+    @media #{$small} {
+      width: 170px;
+    }
+  }
+  .header-narrow {
+    width: 50px;
+    @media #{$small} {
+      width: 75px;
+    }
+  }
+  .header-one {
+    left: 0;
+    @media #{$small} {
+      left: -70px;
+    }
+  }
+  .header-two {
+    left: 55px;
+    @media #{$small} {
+      left: 10px;
+    }
+  }
+  .header-three {
+    left: 110px;
+    @media #{$small} {
+      left: 185px;
+    }
+  }
+  .header-four {
+    left: 165px;
+    @media #{$small} {
+      left: 360px;
+    }
+  }
+
+  //**********  OTHER LIs STYLES  **********
+
+  .content {
+    @include custom-gradient($darkColor);
+    border: .5px solid rgba(150, 150, 150, .1);
+    border-top-color: transparent;
+    margin: .25%;
+    margin-bottom: .5%;
+    border-radius: 8px;
+    padding: .7em 0;
+  }
+  .content-wide {
+    width: 38%;
+  }
+  .content-narrow {
+    width: 9%;
+  }
+;
+
+}
