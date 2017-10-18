@@ -7,7 +7,8 @@ body {
   background: url("../media/main-background.jpg");
   background-size: cover;
   color: #ccc;
-  letter-spacing: .5px; }
+  letter-spacing: .8px;
+  font-size: .9em; }
 
 .divider {
   height: 100px; }
@@ -22,7 +23,7 @@ body {
   bottom: 0;
   background: #000;
   position: absolute;
-  opacity: 0.4; }
+  opacity: 0.8; }
 
 main {
   border-radius: 15px;
@@ -132,5 +133,7 @@ ul {
     width: 38%; }
   ul .content-narrow {
     width: 9%; }
+  ul .content-one, ul .content-three, ul .content-four {
+    color: gray; }
 
 /*# sourceMappingURL=main.css.map */

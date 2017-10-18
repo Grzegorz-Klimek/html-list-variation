@@ -52,7 +52,8 @@ body {
   background: url("../media/main-background.jpg");
   background-size: cover;
   color: $fontBasic;
-  letter-spacing: .5px;
+  letter-spacing: .8px;
+  font-size: .9em;
 }
 
 .divider {
@@ -66,7 +67,7 @@ body {
   @include stretcher();
   background: #000;
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 //***********  LIST STYLES ***********
@@ -191,6 +192,8 @@ ul {
   .content-narrow {
     width: 9%;
   }
-;
+  .content-one, .content-three, .content-four {
+    color: darken($fontBasic, 30%)
+  }
 
 }
